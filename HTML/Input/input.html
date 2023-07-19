@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        input{
+            margin: 5px;
+        };
+        
+    </style>
+    <!--label and all types of input tags-->
+    <form>
+    <label for="firstName">First Name</label>
+    <input type="text" name="fname"> <br>
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lname" style="margin-left: 6px;"> <br>
+    <label for="usrEmail" name="email">Email</label>
+    <input type="email" name="email" style="margin-left: 37px;"><br>
+    <label for="usrPass">Password</label>
+    <input type="password" name="password" style="margin-left: 14px;">
+    <input type="submit" name="Submit" value="SignUp">
+    <input type="reset" name="reset" value="reset">
+    <br><br>
+    <p>What is your gender?</p>
+    <input type="radio" name="gender" value="Male"><!--if you give different name to the input tag for radio then it beomes 
+        check for multiple -->
+    <label for="gender">Male</label> &nbsp; &nbsp;  
+    <input type="radio" name="gender" value="Female">
+    <label for="gender">Female</label><br><br>
+    <p>What is your hobby?</p>
+    <input type="checkbox" name="hobby1" value="Reading">
+    <label for="hobby">Reading</label><br>
+    <input type="checkbox" name="hobby2" value="Writing">
+    <label for="hobby">Writing</label><br>
+    <input type="checkbox" name="hobby3" value="Chess">
+    <label for="hobby">Chess</label>
+    <br><br>
+    <input type="button" name="btn" value="Click Me" onclick="alert('Keep Learning')">
+    <br><br>
+    <input type="color" name="bgcolor" value="#fffff"><br><br>
+    <label for="dob">Date Of Birth</label>
+    <input type="date" name="dob" max="2023-07-19" min="1940-01-01" value="2023-04-12">
+    <br><br>
+    <p>Upload the file(* should be pdf or jpg only)</p>
+    <input type="file" name="myFile" accept=".pdf,.jpg">
+    <br><br>
+    <br><br>
+    <input type="month" min="2023-10" value="2023-11">
+    <br><br>
+    <input type="time" value="12:00:00"/>
+    <br><br>
+    <input type="datetime-local" value="2023-11-10T12:00:00"/>
+    <br><br>
+    <input type="week" value="2023-W10"/>
+    <br><br>
+    <input type="number" value="10" min="4" max="20" step="3" />
+    <br><br>
+    <label>Select Your Age</label>
+    <input type="range" min="0" max="120" value="20" step="1"/>
+</form> 
+</body>
+</html>
