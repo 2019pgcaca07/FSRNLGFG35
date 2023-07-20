@@ -16,13 +16,31 @@
         title:"This is title",
         description:"This is the description"
     }
-    //getting the template 
+    
+    //the template element is retrieved using the getElementById method and stored in the template constant.
     const template = document.getElementById("temp");
-    //getting content inside template
+    //The content of the template element is  cloned using the cloneNode method with the true argument to 
+    //make a deep copy
     const content = template.content.cloneNode(true);
-    //updating content of h1 and p 
+    //The querySelector method is used to select the h2 and p elements within the cloned content.
+    //The innerHTML property of these elements is then set to the corresponding values of the data object. 
     content.querySelector("h1").innerHTML = data.title;
     content.querySelector("p").innerHTML = data.description;
+    //Finally, the modified content is appended to the body element using the appendChild method, effectively adding
+    //the template to the DOM.
     document.body.appendChild(content);
 </script>
+<!-- Explanation :
+
+    The html code defines a template element with the ID myTemplate. 
+    This template element contains a heading element (<h2>) with the text "Hello World", and a 
+    paragraph element (<p>) with the text "This is a pg".
+    In the JavaScript code, a constant named data is defined with two properties: title and description.
+    Then, the template element is retrieved using the getElementById method and stored in the template constant. 
+    The content of the template element is then cloned using the cloneNode method with the true argument to make 
+    a deep copy. This creates a new document fragment that is an exact copy of the template's content.
+    The querySelector method is used to select the h2 and p elements within the cloned content. 
+    The innerHTML property of these elements is then set to the corresponding values of the data object.
+    Finally, the modified content is appended to the body element using the appendChild method, effectively adding
+     the template to the DOM. -->
 </html>
