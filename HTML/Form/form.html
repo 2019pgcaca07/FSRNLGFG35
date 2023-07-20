@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submituserdata" method="get" target="_blank" autocomplete="off" id="myform1" enctype="multipart/form-data">
+        <input type="text" name="email" placeholder="enter your email">
+        <input type="password" name="pwd" placeholder="enter your password">
+        <input type="submit" value="login">
+
+    <br><br>
+     <label>What is your age ?</label>
+    <select name="userage" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+<br><br>
+<textarea name="message" rows="10" cols="50" style="width:100px;height:100px;max-width:2000px;min-width:150px; max-height:200m;"></textarea>
+
+<br><br>
+<!-- you can also triger the form action url using buttom type submit or input tag with type submit -->
+<button type="submit">Don't Click</button>
+<input type="submit" name="submit" value="login" >
+
+<br><br> 
+<fieldset>
+    <legend>Login</legend>
+    <input type="text" name="name" placeholder="enter your name" list="myname">
+    <datalist id="myname">
+        <option value="name1">name1</option>
+        <option value="name2">name2</option>
+        <option value="name3">name3</option>
+    </datalist>
+    <input type="password" name="pwd" placeholder="enter your password">
+    <input type="submit" value="login" formaction="/someotherpath" formenctype="multipart/form-data" formmethod="get" formtarget="_blank">
+</fieldset>
+
+    </form>
+    <input type="submit" value="login" form="myform1">
+
+</body>
+</html>
