@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="temp">
+        <h1>Welcome to our website</h1>
+        <p>This website is to make you perfect</p>
+    </template>
+</body>
+<script>
+    const data={
+        title:"This is title",
+        description:"This is the description"
+    }
+    //getting the template 
+    const template = document.getElementById("temp");
+    //getting content inside template
+    const content = template.content.cloneNode(true);
+    //updating content of h1 and p 
+    content.querySelector("h1").innerHTML = data.title;
+    content.querySelector("p").innerHTML = data.description;
+    document.body.appendChild(content);
+</script>
+</html>
