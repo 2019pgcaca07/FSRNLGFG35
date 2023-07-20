@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--the parent template has a heading and the 
+        child template has a sub-heading -->
+    <template id="parentTemp">
+        <h1>Parent template</h1>
+        <template id="childTemp">
+           <h2>Child template</h2>
+        </template>
+    </template>
+</body>
+<script>
+    
+    // we first get the parent template by using the getElementById() method
+    const parentTemplate = document.getElementById("parentTemp");
+    //create a clone of its content by using the cloneNode() method
+    const parentContent = parentTemplate.content.cloneNode(true);
+    //we get the child template from the parent content by using the 
+     //querySelector() method
+    const childTemplate = parentContent.querySelector("#childTemp");
+    // create a clone of its content as well
+    const childContent =  childTemplate.content.cloneNode(true);
+    //we append the child content to the parent content by using the appendChild() method
+    parentContent.appendChild(childContent);
+    // append the parent content to the HTML body.
+    document.body.appendChild(parentContent);
+</script>
+<!-- In the Html code the parent template has a heading and the 
+     child template has a sub-heading.In the JavaScript code, 
+     we first get the parent template by using the getElementById() method and 
+     create a clone of its content by using the cloneNode() method. 
+     Then, we get the child template from the parent content by using the 
+     querySelector() method and create a clone of its content as well.Finally, 
+     we append the child content to the parent content by using the appendChild() method
+     and append the parent content to the HTML body. This results in the parent template being
+     displayed on the web page with the child template as a nested element.***It is important to note
+     that we use the content property to access the content of the template element and not the element itself.****
+     This property returns a DocumentFragment object which represents the content of the template. 
+     The cloneNode() method is used to create a copy of the content
+     so that we can manipulate it without affecting the original template. -->
+</html>

@@ -24,8 +24,7 @@
     const content = template.content.cloneNode(true);
     //The querySelector method is used to select the h2 and p elements within the cloned content.
     //The innerHTML property of these elements is then set to the corresponding values of the data object. 
-    content.querySelector("h1").innerHTML = data.title;
-    content.querySelector("p").innerHTML = data.description;
+    
     //Finally, the modified content is appended to the body element using the appendChild method, effectively adding
     //the template to the DOM.
     document.body.appendChild(content);
