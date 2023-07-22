@@ -47,6 +47,9 @@ ctx.lineWidth = 3;
 
 // Step 11: Stroke (outline) the path with the specified color and line width
 ctx.stroke();
+/*So, without calling ctx.stroke(), the canvas won't show anything for the path you've created. The shape will only become visible when you tell the canvas to draw it by calling ctx.stroke().
+
+If you don't want to stroke the path but still want to fill it with a color, you can use ctx.fill() instead. ctx.fill() fills the path with the specified color without drawing any outline. In this case, the shape will be visible with its fill color but without any lines.*/
 
 </script>
 <!-- Now, let's explain each line of code:
