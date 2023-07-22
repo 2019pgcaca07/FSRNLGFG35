@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(2, 28, 20);
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    height: 100vh;
+}
+canvas{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 80%;
+}
+</style>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    // accessing the canvas object by getElementById using id
+    const canvas = document.getElementById("canvas");
+    //accessing the context object using getContext method with argument 2d
+    const ctx = canvas.getContext('2d');
+    const width=window.innerWidth;
+
+    //rectangle
+    // ctx.fillStyle="pink"
+    // ctx.fillRect(10,60,150,50);
+    //stroke rectangle
+/*ctx.linewidth=5
+ctx.strokeStyle="white"
+ctx.strokeRect(20,20,80,30)
+
+ctx.linewidth=2
+ctx.strokeStyle="yellow"
+ctx.strokeRect(120,120,80,30)*/
+
+//fill text
+/*ctx.font = "30px April";
+      ctx.fillStyle = "aqua";
+      ctx.fillText("Hey there", 13, 50);*/
+
+
+      //stroke text
+/*ctx.strokeStyle="purple"
+ctx.strokeText("H e l l o W o r l d",15,50)*/
+
+//lines
+
+/*ctx.beginPath()
+ctx.moveTo(50, 50);
+ctx.lineTo(100, 50);
+ctx.lineTo(100, 100);
+ctx.lineTo(50, 100);
+ctx.closePath()
+
+ctx.lineWidth=5
+ctx.strokestyle="darkred"
+ctx.stroke()
+ctx.fillStyle="palegreen"
+ctx.fill()*/
+
+
+//circle
+ctx.beginPath()
+ctx.arc(60,50,40,0,Math.PI*2)
+ctx.strokeStyle="darkred"
+ctx.stroke()
+ctx.fillStyle="palegreen"
+ctx.fill()
+    
+</script>
+<!-- HTML canvas is a drawing surface that allows you to dynamically render graphics using JavaScript. 
+It provides a rectangular area where you can draw graphics, create animations, and generate interactive images.
+The canvas is initially blank and is only a container for graphics, which can be drawn using JavaScript. -->
+</html>
