@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200" style="border: 1px solid black;"></canvas>
+</body>
+<script>
+// Step 1: Get the canvas element from the HTML page
+const canvas = document.getElementById('myCanvas');
+// Step 2: Get the 2D rendering context for drawing
+const ctx = canvas.getContext('2d');
+
+// Step 3: Start drawing a new path
+ctx.beginPath();
+
+// Step 4: Move the pen to the starting position (50, 50)
+ctx.moveTo(50, 50);
+
+// Step 5: Draw a line to a new position (150, 50)
+ctx.lineTo(150, 50);
+
+// Step 6: Draw a line to a new position (150, 150)
+ctx.lineTo(150, 150);
+
+// Step 7: Draw a line to the starting position (50, 150)
+ctx.lineTo(50, 150);
+
+// Step 8: Draw a line to close the path (back to 50, 50)
+ctx.lineTo(50, 50);
+
+// Step 9: Set the stroke color to blue
+ctx.strokeStyle = 'blue';
+
+// Step 10: Set the line width to 3 pixels
+ctx.lineWidth = 3;
+
+// Step 11: Stroke (outline) the path with the specified color and line width
+ctx.stroke();
+
+</script>
+<!-- Now, let's explain each line of code:
+
+const canvas = document.getElementById('myCanvas');
+
+This line gets the canvas element from the HTML page using its ID ('myCanvas') and stores it in the canvas variable.
+const ctx = canvas.getContext('2d');
+
+This line gets the 2D rendering context of the canvas, which is like a magic pen that allows us to draw on the canvas. It is stored in the ctx variable.
+ctx.beginPath();
+
+This line starts a new path. A path is like a series of connected points that we can use to draw shapes or lines.
+ctx.moveTo(50, 50);
+
+This line moves the "pen" (current drawing position) to the starting position (50, 50) without drawing any line.
+ctx.lineTo(150, 50);
+
+This line draws a straight line from the pen's current position (50, 50) to the new position (150, 50).
+ctx.lineTo(150, 150);
+
+This line draws another line from the previous position (150, 50) to the new position (150, 150).
+ctx.lineTo(50, 150);
+
+This line draws another line from the previous position (150, 150) to the new position (50, 150).
+ctx.lineTo(50, 50);
+
+This line draws another line from the previous position (50, 150) back to the starting position (50, 50), closing the path.
+ctx.strokeStyle = 'blue';
+
+This line sets the stroke color to blue. The strokeStyle property determines the color of the lines when we stroke (outline) the path.
+ctx.lineWidth = 3;
+
+This line sets the line width to 3 pixels. The lineWidth property determines the thickness of the lines when we stroke the path.
+ctx.stroke();
+
+This line strokes (outlines) the path with the specified color and line width, drawing the rectangle on the canvas. -->
+</html>
