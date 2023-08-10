@@ -47,3 +47,13 @@ console.log(person['last Name']);
 console.log(person.address);
 console.log(person.fullName());
 console.log(person.greet("evening"));
+
+//find a particular key in object using in
+console.log('firstName' in person);  //return true if exist otherwise false
+
+//printing all key and values of object
+for(let key in person){
+  //console.log(key);
+  //but if you want to print values you have to write objectName[key] not objeectName.key,it will return undefined
+  console.log(key+":" + person[key]);
+}
