@@ -11,6 +11,11 @@ kumar`;
 console.log(fname);
 
 //Javascript objects
+// Summary
+// 1.An object is a collection of key-value pairs.
+// 2.Use the dot notation ( .) or array-like notation ([]) to access a property of an object.
+// 3.The delete operator removes a property from an object.
+// 4.The in operator check if a property exists in an object.
 
 var person = {
      firstName:"Rammppa",
@@ -57,3 +62,8 @@ for(let key in person){
   //but if you want to print values you have to write objectName[key] not objeectName.key,it will return undefined
   console.log(key+":" + person[key]);
 }
+
+
+//delete property of an object
+delete person.age;
+console.log(person.age); //return undefined as age is deleted
