@@ -1,5 +1,5 @@
 var s = null;
-console,console.log(s);
+console.log(s);
 console.log(5/2);
 
 var s = "ranjeet";
@@ -62,6 +62,7 @@ for(let key in person){
   //but if you want to print values you have to write objectName[key] not objeectName.key,it will return undefined
   console.log(key+":" + person[key]);
 }
+console.log(person.address.city);
 
 
 //delete property of an object
