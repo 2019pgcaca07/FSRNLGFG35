@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #message {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    #buttonContainer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .normalButton2 {
+      background-color: green; /* Button color */
+      color: #fff; /* Text color */
+      border: none;
+      padding: 10px 20px;
+      font-size: 2em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .normalButton1 {
+      background-color: red; /* Button color */
+      color: #fff; /* Text color */
+      border: none;
+      padding: 10px 20px;
+      font-size: 2em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+    
+    <h3 id ="message1">"Loving me was never easy, but you did. Understanding me was next to impossible, but you understood. I may not be able to fulfill what you deserve, but I can proudly say you never compromised on fulfilling my emptiness. You are not the best thing that happened to me, you are everything that has happened to me.
+        Thank you."</h3>
+        <br><br><br>
+<h2 id="message2">
+    
+  Will you be mine Valentine forever?
+</h2>
+<br>
+<br><br>
+<div id="buttonContainer">
+  <button class="normalButton1" onclick="handleNo()" >No</button>
+  <div class="normalButton2" onclick="handleYes()">Yes</div>
+</div>
+
+<div id="thankYouPage" style="display: none;">
+  <h2>Thank You!</h2>
+  <img src="images.jpeg" alt="" width="400px" height="400px">
+  <h2 style="">Happy Propose's Day!</h2>
+</div>
+
+<script>
+  function handleNo() {
+    document.getElementById('message1').style.display = 'none';
+    document.getElementById('message2').style.display = 'none';
+    document.getElementById('buttonContainer').style.display = 'none';
+
+    // Show the elements again after 1000 milliseconds (1 second)
+    setTimeout(function () {
+      document.getElementById('message1').style.display = 'block';
+      document.getElementById('message2').style.display = 'block';
+      document.getElementById('buttonContainer').style.display = 'flex';
+    }, 1000);
+  }
+
+  function handleYes() {
+    document.getElementById('message1').style.display = 'none';
+    document.getElementById('message2').style.display = 'none';
+    document.getElementById('buttonContainer').style.display = 'none';
+    document.getElementById('thankYouPage').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
